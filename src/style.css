@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* Declarando a fonte Anona do Figma */
+@font-face {
+  font-family: 'Anona';
+  /* Ajuste o caminho abaixo para onde você salvar o arquivo da fonte no projeto */
+  src: url('/assets/Anona.woff2') format('woff2'),
+       url('/assets/Anona.woff') format('woff'),
+       url('/assets/Anona.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   BOTÃO VERDE PRINCIPAL
+   =============================== */
+.btn-green {
+  background-color: #84FF59;
+  box-shadow: 0 5px 16px 0 rgba(132, 255, 89, 0.38);
+  transition: all 0.2s ease;
+}
+
+.btn-green:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px 0 rgba(132, 255, 89, 0.52);
+}
+
+.btn-green:active {
+  transform: translateY(-1px);
+}
+
+/* ===============================
+   SOMBRAS
+   =============================== */
+.shadow-card-xl {
+  box-shadow:
+    0 20px 50px -10px rgba(0, 0, 0, 0.38),
+    0 8px 18px -5px rgba(0, 0, 0, 0.22);
+}
+
+.shadow-card-md {
+  box-shadow:
+    0 10px 30px -4px rgba(0, 0, 0, 0.32),
+    0 4px 10px -2px rgba(0, 0, 0, 0.16);
+}
+
+.shadow-inner-blob {
+  box-shadow:
+    inset -5px 0 16px rgba(0, 0, 60, 0.42),
+    3px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-logo {
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.22),
+    0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   RECORTE DA IMAGEM DO PALESTRANTE
+   QUADRADA com cantos assimétricos MAIORES
+   =============================== */
+.speaker-img-mask {
+  border-top-left-radius: 6rem;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  border-top-right-radius: 1rem;
+}
+
+/* ===============================
+   ACCORDION
+   =============================== */
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+  background-color: rgba(0, 85, 255, 0.28);
+}
+
+.accordion-content.open {
+  max-height: 700px;
+}
+
+/* ===============================
+   RESPONSIVIDADE - TIPOGRAFIA FLUIDA
+   =============================== */
+@media (min-width: 1280px) {
+  html {
+    font-size: 17px;
+  }
+
+  .speaker-img-mask {
+    border-top-left-radius: 7rem;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-top-right-radius: 1.25rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* ===============================
+   ACESSIBILIDADE
+   =============================== */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #84FF59;
+  outline-offset: 2px;
+  border-radius: 9999px;
+}
+
+/* ===============================
+   SCROLLBAR
+   =============================== */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0044cc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #84FF59;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #66e640;
+}
